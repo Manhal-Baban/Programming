@@ -1,0 +1,69 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: bisque;
+}
+
+header {
+    background: #333;
+    padding: 25px;
+    color: white;
+}
+
+/* 
+background määrittelee tausta ominaisuuksia.
+background color määrittelee vain taustavärin.
+color määrittelee tekstin väriä.
+background defines the background properties.
+background color defines only the background color.
+color defines the text color. */
+
+main {
+
+padding: 10px;
+}
+
+/* 
+Main kontrolloi tässä tillanteessa divien asemointia sivulla.
+Padding siirtää divit 10xp alas ja oikealle.
+Main in this situation controls the positioning of the divs on the page.
+Padding moves the divs 10xp down and to the right.
+*/
+
+
+div {
+background: blue;
+height: 200px;
+width: 200px;
+margin: 0 10px 10px 0;
+display:inline-block;
+}
+
+/*
+Diveissä on marginia 10px oikealla ja alla, jotta marginin määrä ei tuplaannu.
+The dives have a margin of 10px on the right and bottom so that the margin amount does not double.
+
+Luokka, eli class, valitaan css:ssä pisteellä nimen edessä: .nimi
+A class is selected in CSS with a dot in front of the name: .name
+
+*/
+
+.box1 {
+    border: 5px dotted white;
+}
+
+.box2 {
+    border: 7px double seagreen;
+    background-color: cornflowerblue;
+}
+
+.box3 {
+border-style: groove;
+border-width: 10px;
+border-color: white green red yellow;
+
+}

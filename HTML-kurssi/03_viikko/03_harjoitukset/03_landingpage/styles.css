@@ -1,0 +1,46 @@
+* {
+  margin: 50px;
+  padding: 10;
+}
+
+.logo {
+  display: block;
+}
+
+body {
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  background-image: url(marc-olivier-jodoin-MJv31qXqSOU-unsplash.jpg);
+  color: bisque;
+}
+
+.Learn {
+  color: bisque;
+  text-align: center;
+}
+
+p:nth-child(1) {
+  background-color: silver;
+}
+
+.course {
+  margin: 10px;
+  padding: 10px;
+  color: silver;
+}
+
+.list1:hover::before {
+  content: "🤓";
+}
+
+.list1:hover::after {
+  content: "🤓";
+}
+
+.list1:hover {
+  color: brown;
+}
+
+button:hover {
+  color: rgb(140, 105, 255);
+}

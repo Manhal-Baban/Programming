@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: darkgray;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 100px;
+  color: black;
+}
+
+p {
+  font-family: "Underdog", system-ui;
+  font-size: 30px;
+  color: rgb(44, 15, 72);
+}
+
+section {
+  font-family: "Jim Nightshade", cursive;
+  font-size: 30px;
+  color: rgb(181, 241, 223);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 0.36320465686274506) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+#p2 {
+  color: aliceblue;
+  font-size: 25px;
+}
