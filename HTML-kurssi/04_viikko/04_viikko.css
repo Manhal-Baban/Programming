@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #246648;
+  font-family: "poppins", Helvetica, sans-serif;
+}
+
+a {
+  color: #f17e34;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin: 50px auto;
+  width: 300px;
+}
+
+/*Form section */
+.form-wrap {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.form-wrap h1,
+.form-wrap p {
+  margin-bottom: 20px;
+}
+
+label {
+  text-align: left;
+  display: block;
+  /*display:block; when you want orginize to put words over boxes_Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width*/
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+button {
+  background-color: #f17e34;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  width: 200px;
+  height: 30px;
+  align-items: center;
+}
+
+#para {
+  font-size: 0.75em;
+}
+#para1 {
+  color: white;
+}
