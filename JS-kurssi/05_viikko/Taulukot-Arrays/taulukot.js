@@ -51,13 +51,41 @@ console.log(TwoNewMembers);
 
 //13. Etsi kaikki "Joni":in esiintymät ja tallenna niiden indeksit uuteen taulukkoon.
 let joniIndexes = [];
+for (i = 0; i <= teamMembers.length - 1; i++) {
+  if (teamMembers[i] == "Joni") {
+    joniIndexes.push(i);
+  }
+}
+console.log(joniIndexes);
 
 //14. Muunna kaikki nimet taulukossa isoiksi kirjaimiksi, muuttamatta alkuperäistä taulukkoa.
+let teamMembersBig = [...teamMembers];
+for (i = 0; i <= teamMembers.length - 1; i++) {
+  teamMembersBig[i] = teamMembersBig[i].toUpperCase();
+}
+console.log(teamMembersBig);
+
+// other way to do 14
+let teamMembersUp = [];
+teamMembers.forEach(function (member) {
+  teamMembersUp.push(member.toUpperCase());
+});
+console.log(teamMembersUp);
 
 //15. Lajittele `teamMembers` aakkosjärjestykseen.
+let teamMembersABC = teamMembers.sort();
+console.log(teamMembersABC);
 
 //16. Käännä `teamMembers`-taulukon järjestys päinvastaiseksi.
+let teamMembersReversed = teamMembers.reverse();
+console.log(teamMembersReversed);
 
 //17. Tarkista, onko ainakin yksi jäsen nimeltään "Joni".
+let isThereAny = teamMembers.some((teamMembers) => teamMembers == "Johni");
+console.log(isThereAny);
 
 //18. Tarkista, onko kaikilla nimillä yli kolme kirjainta.
+let allOverThree = teamMembers.every(function (name) {
+  return name.length > 3;
+});
+console.log("all over 3 letters?", allOverThree);
