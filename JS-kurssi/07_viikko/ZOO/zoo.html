@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Zoo</title>
+    <link rel="stylesheet" href="zoo.css" />
+    <script src="zoo.js" defer></script>
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <!-- Add this line -->
+    <div class="container">
+      <h1>Little Zoo</h1>
+      <!-- (your existing content continues here...) -->
+      <!-- Search & Filter Section -->
+      <div class="controls">
+        <input type="text" id="searchAnimal" placeholder="Search by name..." />
+        <select id="filterType">
+          <option value="all">All Types</option>
+          <option value="mammal">Mammal</option>
+          <option value="bird">Bird</option>
+          <option value="reptile">Reptile</option>
+          <option value="amphibian">Amphibian</option>
+          <option value="fish">Fish</option>
+        </select>
+        <button id="sortAnimals">Sort A-Z</button>
+      </div>
+
+      <!-- Animal List Display -->
+      <ul id="animalList"></ul>
+
+      <!-- Add New Animal Form -->
+      <div class="add-animal">
+        <h2>Add New Animal</h2>
+        <input type="text" id="newAnimalName" placeholder="Animal Name" />
+        <select id="newAnimalType">
+          <option value="" disabled selected>Select Type</option>
+          <option value="Mammal">Mammal</option>
+          <option value="Bird">Bird</option>
+          <option value="Reptile">Reptile</option>
+          <option value="Amphibian">Amphibian</option>
+          <option value="Fish">Fish</option>
+        </select>
+        <button id="addAnimal">Add Animal</button>
+      </div>
+    </div>
+  </body>
+</html>

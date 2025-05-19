@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: skyblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* or we can use repeat(4, 1fr) */
+  grid-template-rows: repeat(4, 100px);
+  background: grey;
+  gap: 1rem;
+  margin: 50px auto;
+}
+
+.item {
+  background: white;
+}
+
+/* in order not to creat many items we use 1st child, because we have 9 itmes in the html, and they do not have classes only names */
+.item:first-child {
+  background-color: green;
+  grid-column: 1 / span 4; /*if we use 1/4 for example the 4 would be the line where the green color ends so 4 is the end of the 4th column line */
+}
+/*so for the 2nd item and so on we use the item:nth-child() and we put the number we want in the parentheses */
+.item:nth-child(2) {
+  background: blue;
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+
+.item:last-child {
+  background: yellow;
+  grid-column: 1 / 5;
+}

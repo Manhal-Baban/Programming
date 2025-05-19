@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Two Truths, One Lie</title>
+    <link rel="stylesheet" href="3 claims 1 lie.css" />
+  </head>
+  <body>
+    <form onsubmit="return false;">
+      <h1>Two Truths, One Lie</h1>
+
+      <!-- Statement 1 -->
+      <div class="claim">
+        <label for="claim1">Claim 1:</label>
+        <input type="text" id="claim1" value="I'm BATMAN!" readonly />
+        <input type="checkbox" id="guess1" /> I think this is true
+      </div>
+
+      <!-- Statement 2 -->
+      <div class="claim">
+        <label for="claim2">Claim 2:</label>
+        <input type="text" id="claim2" value="I have 2 brothers" readonly />
+        <input type="checkbox" id="guess2" /> I think this is true
+      </div>
+
+      <!-- Statement 3 -->
+      <div class="claim">
+        <label for="claim3">Claim 3:</label>
+        <input type="text" id="claim3" value="I speak 4 languages" readonly />
+        <input type="checkbox" id="guess3" /> I think this is true
+      </div>
+
+      <!-- Hidden correct answers set by you -->
+      <input type="hidden" id="truth1" value="true" />
+      <input type="hidden" id="truth2" value="true" />
+      <input type="hidden" id="truth3" value="false" />
+
+      <button onclick="checkAnswers()">Reveal Truth!</button>
+      <div id="result"></div>
+    </form>
+
+    <script src="3 claims 1 lie.js"></script>
+  </body>
+</html>
