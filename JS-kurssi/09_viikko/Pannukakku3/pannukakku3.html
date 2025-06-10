@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Orders</title>
+    <link rel="stylesheet" href="pannukakku3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 🖼 Image side -->
+      <div class="image-container">
+        <img src="pannukakku3.jpg" alt="Delicious pancakes" />
+      </div>
+
+      <!-- 👨‍🍳 Form side -->
+      <div class="form-container">
+        <h2>All Orders</h2>
+
+        <!-- 🔐 Login -->
+        <div id="loginBox">
+          <label for="password">Enter password:</label>
+          <input type="password" id="password" />
+          <button id="loginButton">Log in</button>
+          <p id="loginMessage"></p>
+        </div>
+
+        <!-- 🧾 Orders -->
+        <div id="orderManager" style="display: none">
+          <input
+            type="text"
+            id="searchBox"
+            placeholder="Search by name, ID, type, or delivery..."
+          />
+          <div id="ordersContainer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="pannukakku3.js"></script>
+  </body>
+</html>
