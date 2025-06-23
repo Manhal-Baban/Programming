@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manhal's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="my logo.png" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container centered">
+        <!-- Left: Logo -->
+        <div class="logo-flip">
+          <div class="logo-inner">
+            <div class="logo-front">
+              <img src="my logo.png" alt="Logo" class="nav-logo" />
+            </div>
+            <div class="logo-back">
+              <span>MB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Nav links + buttons -->
+        <div class="nav-right">
+          <ul class="nav-links-wrapper">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+
+          <button id="theme-toggle" title="Toggle Theme">🌙</button>
+          <button id="menu-toggle" class="hamburger" title="Open menu">
+            ☰
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Manhal Baban</h1>
+        <h2 id="typewriter-line-1"></h2>
+        <p id="typewriter-line-2"></p>
+
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </header>
+
+    <section class="about reveal" id="about">
+      <div class="about-container">
+        <img src="My image.png" alt="Profile Picture" class="about-img" />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            I'm Manhal Baban, a frontend developer and licensed security guard
+            based in Finland. I hold a bachelor's degree in translation and
+            previously worked as a journalist and translator. I'm currently
+            studying React, PHP, and WordPress at Helsinki Business College, and
+            I now focus on creating modern, responsive websites using clean,
+            efficient code.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects reveal" id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-container">
+        <!-- only the cards go here -->
+
+        <!-- Card 1 -->
+        <article class="project-card">
+          <img src="My Work/zoo.png" alt="ZOO project screenshot" />
+          <h3>ZOO</h3>
+          <p>Object-oriented zoo info site built with vanilla JavaScript.</p>
+          <a
+            href="https://github.com/Manhal-Baban/Programming/tree/main/JS-kurssi/07_viikko/ZOO"
+            target="_blank"
+            class="btn"
+            >GitHub</a
+          >
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card">
+          <img src="My Work/flexfest.png" alt="Flex-Fest screenshot" />
+          <h3>Flex-Fest</h3>
+          <p>A festival landing page practising CSS Flexbox layouts.</p>
+          <a
+            href="https://github.com/Manhal-Baban/Programming/tree/main/HTML-kurssi/06_viikko/Flex-Fest"
+            target="_blank"
+            class="btn"
+            >GitHub</a
+          >
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card">
+          <img src="My Work/order summary.png" alt="Order-Summary component" />
+          <h3>Order Summary</h3>
+          <p>Responsive component challenge focusing on clean CSS.</p>
+          <a
+            href="https://github.com/Manhal-Baban/Programming/tree/main/HTML-kurssi/Portfolio/order-summary-component-main"
+            target="_blank"
+            class="btn"
+            >GitHub</a
+          >
+        </article>
+
+        <!-- Card 4 -->
+        <article class="project-card">
+          <img src="My Work/pancake.png" alt="Pancake Order App" />
+          <h3>Pancake Order App</h3>
+          <p>
+            School project that allows users to build and submit pancake orders.
+            Includes status tracking and localStorage functionality.
+          </p>
+          <a
+            href="https://github.com/Manhal-Baban/Programming/tree/main/JS-kurssi/09_viikko/Pannukakku3"
+            target="_blank"
+            class="btn"
+            >GitHub</a
+          >
+        </article>
+      </div>
+    </section>
+
+    <footer class="reveal" id="contact">
+      <div class="footer-container">
+        <h2>Contact Me</h2>
+
+        <form id="contactForm" autocomplete="off">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+          <!-- simple feedback msg -->
+          <p id="formMsg" class="form-msg"></p>
+        </form>
+      </div>
+      <div class="social-links">
+        <a
+          href="https://github.com/Manhal-Baban"
+          target="_blank"
+          title="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/manhal-baban-1b4452358/"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/manhal_baban/"
+          target="_blank"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:manhal.baban@gmail.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://discord.com/users/1247317340312567882"
+          target="_blank"
+          title="Discord"
+        >
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">↑</button>
+
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

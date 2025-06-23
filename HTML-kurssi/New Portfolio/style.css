@@ -1,0 +1,624 @@
+/* === GLOBAL RESETS === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: #121212;
+  color: #f1f1f1;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1e1e1e;
+  color: #fff;
+  padding: 15px 30px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* === Logo === */
+.logo-flip {
+  width: 50px;
+  height: 50px;
+  perspective: 1000px;
+}
+
+/* === Nav Links (centered) === */
+.nav-links-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links-wrapper a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links-wrapper a:hover {
+  color: #00bcd4;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* === Right buttons (theme toggle + hamburger) === */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* === Theme toggle button === */
+#theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  color: #00bcd4;
+}
+
+/* === Hamburger menu (hidden by default) === */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #00bcd4;
+}
+
+/* === Mobile styles === */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background: #1e1e1e;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* === HERO SECTION === */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  padding-top: 80px; /* space for navbar */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #00bcd4;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00acc1;
+}
+
+/* === ABOUT SECTION === */
+.about {
+  padding: 60px 20px;
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 15%;
+  border-radius: 50%;
+  border: 4px solid #333;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* === PROJECTS SECTION === */
+.projects {
+  padding: 80px 20px 60px;
+  background: #121212;
+  color: #f1f1f1;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1400px; /* was 1200px */
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 20px;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  margin: 0 20px 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-card .btn {
+  align-self: flex-start;
+  margin: 0 20px 20px;
+  padding: 0.5rem 1rem;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === FOOTER / CONTACT === */
+footer {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-size: 0.95rem;
+}
+
+form input,
+form textarea {
+  padding: 12px 15px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #121212;
+  color: #f1f1f1;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+form .btn {
+  align-self: flex-start;
+}
+
+/* tiny success / error text */
+.form-msg {
+  font-size: 0.9rem;
+  height: 1.2rem; /* reserves space so layout doesn’t jump */
+}
+
+/* === BACK TO TOP BUTTON === */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  display: none; /* hidden by default */
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #00acc1;
+}
+
+/* === GALLERY PAGE === */
+.gallery-page {
+  padding: 100px 20px 60px;
+  background: #121212;
+  color: #f1f1f1;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.gallery-page h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #00bcd4;
+}
+
+/* === LIGHT THEME OVERRIDES === */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #121212;
+}
+
+body.light-mode .navbar {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .nav-links a {
+  color: #000000;
+}
+
+body.light-mode .nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* ✅ This is the only fix you need */
+body.light-mode .nav-links-wrapper a {
+  color: #121212;
+}
+
+body.light-mode .nav-links-wrapper a:hover {
+  color: #00bcd4;
+}
+/* ✅ End fix */
+
+body.light-mode .hero,
+body.light-mode .about,
+body.light-mode .projects,
+body.light-mode footer {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+body.light-mode .project-card {
+  background: #eeeeee;
+  color: #121212;
+}
+
+body.light-mode .btn {
+  background-color: #00bcd4;
+  color: white;
+}
+
+body.light-mode #backToTop {
+  background-color: #00bcd4;
+  color: white;
+}
+body.light-mode .social-links a {
+  color: #121212;
+}
+
+body.light-mode .social-links a:hover {
+  color: #00bcd4;
+  text-shadow: 0 0 8px #00bcd4, 0 0 12px #00bcd4;
+}
+
+/* === SCROLL-REVEAL === */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === SOCIAL MEDIA ICONS === */
+.social-links {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: #f1f1f1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00bcd4;
+  text-shadow: 0 0 8px #00bcd4, 0 0 12px #00bcd4;
+  animation: shake 0.6s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-1px, 1px) rotate(-2deg);
+  }
+  40% {
+    transform: translate(-1px, -1px) rotate(2deg);
+  }
+  60% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  80% {
+    transform: translate(1px, -1px) rotate(2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-2deg);
+  }
+}
+
+/* === FLIP LOGO === */
+.logo-flip {
+  width: 50px;
+  height: 50px;
+  perspective: 1000px;
+  margin-right: auto;
+}
+
+.logo-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.logo-flip:hover .logo-inner {
+  transform: rotateY(180deg);
+}
+
+.logo-front,
+.logo-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: invert(100%);
+  border-radius: 50%;
+}
+
+.logo-back {
+  background-color: #00bcd4;
+  color: #121212;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transform: rotateY(180deg);
+}
