@@ -62,7 +62,7 @@ toggleBtn.addEventListener("click", () => {
 
 // Mobile menu toggle
 const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const navLinks = document.querySelector(".nav-links-wrapper");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
